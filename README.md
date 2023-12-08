@@ -17,47 +17,60 @@ https://vsys.host/how-to/how-to-install-wordpress-on-ubuntu-22-04-with-a-lamp-st
 
 ## Install Apache Web Server
 
-sudo apt install apache2 -y
-sudo systemctl start apache2
-sudo systemctl status apache2
+<ul>
+  <li>sudo apt install apache2 -y
+  <li>sudo systemctl start apache2
+  <li>sudo systemctl status apache2
+</ul>
 
 ## Install MySQL
 
-sudo apt install mysql-server
-sudo mysql_secure_installation
-set root password, remove anonymous users, disable remote login, remove test database
+<ul>
+  <li>sudo apt install mysql-server
+  <li>sudo mysql_secure_installation
+  <li>set root password, remove anonymous users, disable remote login, remove test database
+</ul>
 
 ## Install PHP and required modules
 
-sudo apt install php libapache2-mod-php php-mysql php-curl php-gd php-imagick php-mbstring php-xml php-xmlrpc -y
-sudo systemctl restart apache2
+<ul>
+  <li>sudo apt install php libapache2-mod-php php-mysql php-curl php-gd php-imagick php-mbstring php-xml php-xmlrpc -y
+  </li>sudo systemctl restart apache2
+</ul>
 
 ## Create MySQL database and user for WordPress
 
 sudo mysql -u root -p
 
-  CREATE DATABASE wordpress;
-  CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'password';
-  GRANT ALL PRIVILEGES ON wordpress.* TO 'wpuser'@'localhost';
-  FLUSH PRIVILEGES;
-  quit
+<ul>
+  <li>CREATE DATABASE wordpress;
+  <li>CREATE USER 'wpuser'@'localhost' IDENTIFIED BY 'password';
+  <li>GRANT ALL PRIVILEGES ON wordpress.* TO 'wpuser'@'localhost';
+  <li>FLUSH PRIVILEGES;
+  <li>quit
+</ul>
 
 ## Install WordPress
 
-cd /var/www/html
-sudo wget -c http://wordpress.org/latest.tar.gz
-sudo tar -xzvf latest.tar.gz
-cd wordpress
-sudo cp wp-config-sample.php wp-config.php
+<ul>
+  <li>cd /var/www/html
+  <li>sudo wget -c http://wordpress.org/latest.tar.gz
+  <li>sudo tar -xzvf latest.tar.gz
+  <li>cd wordpress
+  <li>sudo cp wp-config-sample.php wp-config.php
+</ul>
 
 sudo nano wp-config.php
 
-  define('DB_NAME', 'wordpress');
-  define('DB_USER', 'wpuser');
-  define('DB_PASSWORD', 'password');
-
-sudo chown -R www-data:www-data /var/www/html
-sudo chmod -R g+rwX /var/www/html
+<ul>
+  <li>define('DB_NAME', 'wordpress');
+  <li>define('DB_USER', 'wpuser');
+  <li>define('DB_PASSWORD', 'password');
+</ul>
+<ul>
+  <li>sudo chown -R www-data:www-data /var/www/html
+  <li>sudo chmod -R g+rwX /var/www/html
+</ul>
 
 ## Change Permissions
 
@@ -71,9 +84,11 @@ sudo nano /etc/php/8.1/apache2/php.ini
 
 put the following at bottom of file:
 
-  upload_max_filesize = 100M
-  post_max_size = 200M
-  memory_limit = 128M
+<ul>
+  <li>upload_max_filesize = 100M
+  <li>post_max_size = 200M
+  <li>memory_limit = 128M
+</ul>
 
 ## Change default Site for Apache
 
@@ -87,7 +102,8 @@ sudo systemctl restart apache2
 
 https://certbot.eff.org/instructions?ws=apache&os=ubuntufocal
 
-sudo snap install --classic certbot
-sudo ln -s /snap/bin/certbot /usr/bin/certbot
-sudo certbot --apache
-###
+<ul>
+  <li>sudo snap install --classic certbot
+  <li>sudo ln -s /snap/bin/certbot /usr/bin/certbot
+  <li>sudo certbot --apache
+</ul>

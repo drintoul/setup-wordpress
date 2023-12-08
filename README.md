@@ -26,7 +26,7 @@ https://vsys.host/how-to/how-to-install-wordpress-on-ubuntu-22-04-with-a-lamp-st
 ## Install MySQL
 
 <ul>
-  <li>sudo apt install mysql-server
+  <li>sudo apt install mysql-server -y
   <li>sudo mysql_secure_installation
   <li>set root password, remove anonymous users, disable remote login, remove test database
 </ul>

@@ -4,8 +4,10 @@ Collection of steps to create a self-hosted Wordpress site
 ## Create Server
 
 Get Ubuntu Server 22.04 from https://ubuntu.com/download/server
-Install Ubuntu Server 22.04 in virtual machine
-Make sure to enable SSH server
+<ul>
+  <li>Install Ubuntu Server 22.04 in virtual machine
+  <li>Make sure to enable SSH server
+</ul>
 
 ## Update
 

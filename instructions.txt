@@ -1,1 +1,3 @@
-
+Install Ubuntu 22.04 in virtual machine
+Make sure to enable SSH server
+sudo apt update && sudo apt upgrade -y

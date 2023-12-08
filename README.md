@@ -67,36 +67,39 @@ sudo nano wp-config.php
   <li>define('DB_USER', 'wpuser');
   <li>define('DB_PASSWORD', 'password');
 </ul>
-<ul>
-  <li>sudo chown -R www-data:www-data /var/www/html
-  <li>sudo chmod -R g+rwX /var/www/html
-</ul>
 
 ## Change Permissions
 
 https://wordpress.stackexchange.com/questions/19649/wordpress-on-localhost-lamp-doesnt-let-me-install-plugins
 
+<ul>
+  <li>sudo chown -R www-data:www-data /var/www/html
+  <li>sudo chmod -R g+rwX /var/www/html
+</ul>
+
 ## Increase Max Upload Filesize
 
 https://servebolt.com/articles/increase-maximum-upload-file-size-in-wordpress/
 
-sudo nano /etc/php/8.1/apache2/php.ini
-
-put the following at bottom of file:
-
 <ul>
-  <li>upload_max_filesize = 100M
-  <li>post_max_size = 200M
-  <li>memory_limit = 128M
+  <li>sudo nano /etc/php/8.1/apache2/php.ini
+
+  <li>put the following at bottom of file:
+
+  <ul>
+    <li>upload_max_filesize = 100M
+    <li>post_max_size = 200M
+    <li>memory_limit = 128M
+  </ul>
 </ul>
 
 ## Change default Site for Apache
 
-sudo nano /etc/apache2/sites-enabled/000-default.conf
-
-append /wordpress to DocumentRoot
-
-sudo systemctl restart apache2
+<ul>
+  <li>sudo nano /etc/apache2/sites-enabled/000-default.conf
+  <li>append /wordpress to DocumentRoot
+  <li>sudo systemctl restart apache2
+</ul>
 
 ## Install SSL Certificate
 

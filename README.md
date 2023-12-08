@@ -35,7 +35,7 @@ https://vsys.host/how-to/how-to-install-wordpress-on-ubuntu-22-04-with-a-lamp-st
 
 <ul>
   <li>sudo apt install php libapache2-mod-php php-mysql php-curl php-gd php-imagick php-mbstring php-xml php-xmlrpc -y
-  </li>sudo systemctl restart apache2
+  <li>sudo systemctl restart apache2
 </ul>
 
 ## Create MySQL database and user for WordPress

@@ -34,7 +34,7 @@ https://vsys.host/how-to/how-to-install-wordpress-on-ubuntu-22-04-with-a-lamp-st
 ## Install PHP and required modules
 
 <ul>
-  <li>sudo apt install php libapache2-mod-php php-mysql php-curl php-gd php-imagick php-mbstring php-xml php-xmlrpc -y
+  <li>sudo apt install php libapache2-mod-php php-mysql php-curl php-gd php-imagick php-mbstring php-xml php-xmlrpc php-zip php-intl -y
   <li>sudo systemctl restart apache2
 </ul>
 

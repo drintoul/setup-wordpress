@@ -1,4 +1,4 @@
-# wordpress
+# setup-wordpress
 Steps to create a self-hosted Wordpress site
 
 ## Create Server
